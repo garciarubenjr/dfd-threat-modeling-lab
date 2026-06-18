@@ -66,11 +66,7 @@ This project follows the four-question threat modeling structure:
 
 The QRScope Level 1 DFD shows how user-provided QR images, screenshots, and camera input move through the browser-based application.
 
-### QRScope Level 1 DFD
-
-<!-- Add your exported PNG here after uploading it to the qrscope folder -->
-
-![QRScope Level 1 DFD](./qrscope/qrscope-level-1-dfd.png)
+<img width="760" height="1000" alt="QRScope Level 1 DFD" src="https://github.com/user-attachments/assets/9e62d467-e575-42f8-adff-e36b6ac9e3f6" />
 
 ---
 
@@ -220,57 +216,4 @@ Uploaded QR screenshots may contain sensitive information outside the QR code, s
 **Mitigation:**  
 Process uploaded QR images in the browser, avoid persistent storage, do not save uploaded images or decoded QR contents, clear temporary browser state when the user scans another QR code, and clearly disclose the no-storage behavior to users.
 
----
 
-## Screenshots
-
-Add your screenshots in the `qrscope/screenshots/` folder.
-
-### OWASP Threat Dragon Home
-
-<!-- Upload this file as: qrscope/screenshots/00-threat-dragon-home.png -->
-
-![OWASP Threat Dragon Home](./qrscope/screenshots/00-threat-dragon-home.png)
-
-### Project Overview
-
-<!-- Upload this file as: qrscope/screenshots/01-threat-dragon-project-overview.png -->
-
-![Threat Dragon Project Overview](./qrscope/screenshots/01-threat-dragon-project-overview.png)
-
-### Full QRScope DFD
-
-<!-- Upload this file as: qrscope/screenshots/02-qrscope-full-dfd.png -->
-
-![QRScope Full DFD](./qrscope/screenshots/02-qrscope-full-dfd.png)
-
-### Trust Boundaries
-
-<!-- Upload this file as: qrscope/screenshots/03-qrscope-trust-boundaries.png -->
-
-![QRScope Trust Boundaries](./qrscope/screenshots/03-qrscope-trust-boundaries.png)
-
-### STRIDE Threat Entry
-
-<!-- Upload this file as: qrscope/screenshots/04-qrscope-stride-threats.png -->
-
-![QRScope STRIDE Threat Entry](./qrscope/screenshots/04-qrscope-stride-threats.png)
-
----
-
-## Files to Upload
-
-Place your files in the following locations:
-
-```text
-dfd-threat-modeling-lab/
-├── README.md
-├── qrscope/
-│   ├── qrscope-threat-model.json
-│   ├── qrscope-level-1-dfd.png
-│   └── screenshots/
-│       ├── 00-threat-dragon-home.png
-│       ├── 01-threat-dragon-project-overview.png
-│       ├── 02-qrscope-full-dfd.png
-│       ├── 03-qrscope-trust-boundaries.png
-│       └── 04-qrscope-stride-threats.png
