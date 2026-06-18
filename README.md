@@ -15,7 +15,10 @@ The goal of this project is to demonstrate how threat modeling supports penetrat
 
 This project focuses on **QRScope**, a browser-based QR code inspection utility that helps users decode QR codes from uploaded images, screenshots, or camera input before deciding whether to open the result.
 
-QRScope is designed to help users inspect QR code content safely before taking action.
+QRScope is designed to help users inspect QR code content safely before taking action.  https://qrscope.io/
+
+<img width="1307" height="817" alt="{2F98E257-83A9-459D-B907-94A65A8D5CF1}" src="https://github.com/user-attachments/assets/f581d0d0-312b-4c55-958e-57fa07237283" />
+
 
 ---
 
@@ -176,6 +179,9 @@ A QR code may contain crafted text, HTML-like content, JavaScript-like payloads,
 
 **Mitigation:**  
 Render decoded QR content as plain text only. Escape all user-controlled output, avoid unsafe HTML rendering, do not use `dangerouslySetInnerHTML`, do not auto-open decoded links, and require deliberate user action before navigation.
+
+<img width="797" height="751" alt="04-qrscope-stride-threats" src="https://github.com/user-attachments/assets/ba039e0b-b28a-4151-a460-2df140b90e59" />
+
 
 ---
 
