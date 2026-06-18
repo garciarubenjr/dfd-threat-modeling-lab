@@ -1,0 +1,1514 @@
+{
+  "version": "2.6.2",
+  "summary": {
+    "title": "QRScope Threat Model",
+    "owner": "Ruben Garcia",
+    "description": " Browser-based QR code inspection utility that decodes QR codes from uploads, screenshots, or camera input before the user decides whether to open the result.",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "id": 1,
+        "title": "QRScope Level 1 DFD",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.6.2",
+        "cells": [
+          {
+            "position": {
+              "x": -570,
+              "y": -470
+            },
+            "size": {
+              "width": 660,
+              "height": 640
+            },
+            "attrs": {
+              "label": {
+                "text": "Trust Boundary: Browser / QRScope App"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "c73f090d-b807-4891-a429-3e60aedcb921",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Trust Boundary: Browser / QRScope App",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [
+                "0df20e92-d176-4c52-ba7e-88c6fdba5e9e",
+                "f60bf15f-51ce-49ab-96db-f9dc8439770e",
+                "974ad000-1fcc-48aa-9e64-52016fdf7098",
+                "c54f6501-7c9c-4a03-b9e9-843928a1747b"
+              ],
+              "containedElements": [
+                "297fe5d0-1e3c-4e40-bbc0-7c3d8b7413b5",
+                "21b6221b-03ab-496f-8dd0-fe89fde63b9d",
+                "153e1e03-fffa-4e44-a225-383104be8587",
+                "2871f504-fee0-4a81-8b2d-b215dcf5fd57",
+                "3009420c-adbb-4a25-a05a-7b56066fc2ca",
+                "9edaf543-e4bb-46e2-9b0a-e39302f8ff81"
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": -336.2500000000016,
+              "y": 220
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "External Destination URL \nOutside QRScope Control"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": "4 3"
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "7c8b5c0d-8eb4-468a-9b79-f28e2d83b32f"
+                },
+                {
+                  "group": "right",
+                  "id": "287a6010-d190-4a34-b3e7-eaa099667492"
+                },
+                {
+                  "group": "bottom",
+                  "id": "a0ede712-fc86-453c-90fd-e259bcec3aa4"
+                },
+                {
+                  "group": "left",
+                  "id": "0334df27-76be-42da-9353-d022e1d4f782"
+                }
+              ]
+            },
+            "id": "14877b0e-8b14-44ee-896d-eeac5d973c21",
+            "zIndex": 1,
+            "data": {
+              "type": "tm.Actor",
+              "name": "External Destination URL \nOutside QRScope Control",
+              "description": "",
+              "isTrustBoundary": false,
+              "outOfScope": true,
+              "reasonOutOfScope": "QRScope may show the decoded link, but it does not control the destination website.",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": -370.0000000000016,
+              "y": -620
+            },
+            "size": {
+              "width": 180,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "User Browser / Mobile"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "7c8b5c0d-8eb4-468a-9b79-f28e2d83b32f"
+                },
+                {
+                  "group": "right",
+                  "id": "287a6010-d190-4a34-b3e7-eaa099667492"
+                },
+                {
+                  "group": "bottom",
+                  "id": "a0ede712-fc86-453c-90fd-e259bcec3aa4"
+                },
+                {
+                  "group": "left",
+                  "id": "0334df27-76be-42da-9353-d022e1d4f782"
+                }
+              ]
+            },
+            "id": "4296dcd3-5c11-48c3-b59b-3a39ea3e7096",
+            "zIndex": 2,
+            "data": {
+              "type": "tm.Actor",
+              "name": "User Browser / Mobile",
+              "description": "",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": [
+                {
+                  "id": "dde6702e-6c10-4ac1-89b6-fc8ade666680",
+                  "title": "User trusts a spoofed QR destination",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "A QR code may point to a spoofed or lookalike destination that imitates a trusted website, brand, login page, payment page, or university service. Because QR codes hide the destination from the user until decoded, the user may trust the QR code and open a malicious link without recognizing the risk.",
+                  "mitigation": "Display the decoded QR content before navigation, show the full destination clearly, avoid automatic link opening, defang suspicious URLs when appropriate, and require deliberate user action before leaving QRScope.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": "8"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 2,
+                "repudiation": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": -430.0000000000016,
+              "y": -420
+            },
+            "size": {
+              "width": 60,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Image Upload Handler"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "2ffa396f-ae68-4458-b193-569dce950d7e"
+                },
+                {
+                  "group": "right",
+                  "id": "b34f799d-9f8f-4073-bfdf-3e06c6312dc7"
+                },
+                {
+                  "group": "bottom",
+                  "id": "3c0ec13d-5852-4e3b-a0e4-30c91afbd0fd"
+                },
+                {
+                  "group": "left",
+                  "id": "bcaaa38a-a8e8-49e6-820f-6570f079c091"
+                }
+              ]
+            },
+            "id": "297fe5d0-1e3c-4e40-bbc0-7c3d8b7413b5",
+            "zIndex": 3,
+            "data": {
+              "type": "tm.Process",
+              "name": "Image Upload Handler",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "176821b4-a836-43f0-9978-bdcaeaa26077",
+                  "title": "Oversized or malformed image causes browser performance issue",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "A user may upload an oversized, malformed, or unsupported QR image that causes excessive browser resource usage, decoder errors, slow performance, or a failed scan. Because QRScope processes user-provided images in the browser, malformed input should be handled safely without freezing the page or creating repeated decode attempts.",
+                  "mitigation": "Enforce file size limits, allow only supported image types, validate file MIME/type before processing, handle decoder errors safely, prevent repeated decode loops, and display a clear error message when an image cannot be processed.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": "6"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 2,
+                "elevationOfPrivilege": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": -180.0000000000016,
+              "y": -420
+            },
+            "size": {
+              "width": 60,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Camera Scan Handler"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "2ffa396f-ae68-4458-b193-569dce950d7e"
+                },
+                {
+                  "group": "right",
+                  "id": "b34f799d-9f8f-4073-bfdf-3e06c6312dc7"
+                },
+                {
+                  "group": "bottom",
+                  "id": "3c0ec13d-5852-4e3b-a0e4-30c91afbd0fd"
+                },
+                {
+                  "group": "left",
+                  "id": "bcaaa38a-a8e8-49e6-820f-6570f079c091"
+                }
+              ]
+            },
+            "id": "21b6221b-03ab-496f-8dd0-fe89fde63b9d",
+            "zIndex": 4,
+            "data": {
+              "type": "tm.Process",
+              "name": "Camera Scan Handler",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "6ce51c96-bdb4-4602-97b1-a401ab6b58ba",
+                  "title": "Camera scan continues after successful decode",
+                  "status": "Mitigated",
+                  "severity": "TBD",
+                  "type": "Denial of service",
+                  "description": "Threat: Camera scan continues after successful decode\nCategory: Information Disclosure / Denial of Service\nMitigation: Stop scanning after a successful decode and require the user to start a new scan manually.",
+                  "mitigation": "Stop scanning after a successful decode and require the user to start a new scan manually.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": -330.0000000000016,
+              "y": -338
+            },
+            "size": {
+              "width": 100,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "QR Decode Logic"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "2ffa396f-ae68-4458-b193-569dce950d7e"
+                },
+                {
+                  "group": "right",
+                  "id": "b34f799d-9f8f-4073-bfdf-3e06c6312dc7"
+                },
+                {
+                  "group": "bottom",
+                  "id": "3c0ec13d-5852-4e3b-a0e4-30c91afbd0fd"
+                },
+                {
+                  "group": "left",
+                  "id": "bcaaa38a-a8e8-49e6-820f-6570f079c091"
+                }
+              ]
+            },
+            "id": "153e1e03-fffa-4e44-a225-383104be8587",
+            "zIndex": 5,
+            "data": {
+              "type": "tm.Process",
+              "name": "QR Decode Logic",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": -310.0000000000016,
+              "y": -195
+            },
+            "size": {
+              "width": 60,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Decode Result Display"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "2ffa396f-ae68-4458-b193-569dce950d7e"
+                },
+                {
+                  "group": "right",
+                  "id": "b34f799d-9f8f-4073-bfdf-3e06c6312dc7"
+                },
+                {
+                  "group": "bottom",
+                  "id": "3c0ec13d-5852-4e3b-a0e4-30c91afbd0fd"
+                },
+                {
+                  "group": "left",
+                  "id": "bcaaa38a-a8e8-49e6-820f-6570f079c091"
+                }
+              ]
+            },
+            "id": "2871f504-fee0-4a81-8b2d-b215dcf5fd57",
+            "zIndex": 6,
+            "data": {
+              "type": "tm.Process",
+              "name": "Decode Result Display",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "ab750bd0-a66c-4b54-8bdd-9274a789743f",
+                  "title": "Malicious QR content rendered unsafely",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "A QR code may contain crafted text, HTML-like content, JavaScript-like payloads, or misleading URL formatting intended to manipulate how decoded content is displayed to the user. If QRScope renders decoded content unsafely, an attacker could cause script execution, visual deception, or unsafe link presentation inside the browser.",
+                  "mitigation": "Render decoded QR content as plain text only. Escape all user-controlled output, avoid unsafe HTML rendering, do not use dangerouslySetInnerHTML, do not auto-open decoded links, and require deliberate user action before navigation.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": "8"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 2,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": -310.0000000000016,
+              "y": -52
+            },
+            "size": {
+              "width": 60,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Safety Message / Defanged Output"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "2ffa396f-ae68-4458-b193-569dce950d7e"
+                },
+                {
+                  "group": "right",
+                  "id": "b34f799d-9f8f-4073-bfdf-3e06c6312dc7"
+                },
+                {
+                  "group": "bottom",
+                  "id": "3c0ec13d-5852-4e3b-a0e4-30c91afbd0fd"
+                },
+                {
+                  "group": "left",
+                  "id": "bcaaa38a-a8e8-49e6-820f-6570f079c091"
+                }
+              ]
+            },
+            "id": "3009420c-adbb-4a25-a05a-7b56066fc2ca",
+            "zIndex": 7,
+            "data": {
+              "type": "tm.Process",
+              "name": "Safety Message / Defanged Output",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": -340.0000000000016,
+              "y": 62
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": " Browser Memory / Temporary State"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "faa6c85d-20e6-4803-9c6b-efc1c9e018e0"
+                },
+                {
+                  "group": "right",
+                  "id": "6c032caa-3d6d-4790-a988-48351acccaef"
+                },
+                {
+                  "group": "bottom",
+                  "id": "a3a924bb-d6d2-48cd-9e6e-772171a23b53"
+                },
+                {
+                  "group": "left",
+                  "id": "25bdd72f-0e48-47b2-9ed6-5062a11c869c"
+                }
+              ]
+            },
+            "id": "9edaf543-e4bb-46e2-9b0a-e39302f8ff81",
+            "zIndex": 8,
+            "data": {
+              "type": "tm.Store",
+              "name": " Browser Memory / Temporary State",
+              "description": "No database, no backend API, no QRScope API, no persistent upload storage",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": [
+                {
+                  "id": "53e3b4ad-852c-48e9-8bb2-f13a83a31e2c",
+                  "title": "Sensitive screenshot data exposed through persistence",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Uploaded QR screenshots may contain sensitive information outside the QR code, such as messages, account details, names, emails, location data, or other private screen content. If uploaded images or decoded QR contents were stored, cached, logged, or exposed beyond the browser session, sensitive user information could be disclosed.",
+                  "mitigation": "Process uploaded QR images in the browser, avoid persistent storage, do not save uploaded images or decoded QR contents, clear temporary browser state when the user scans another QR code, and clearly disclose the no-storage behavior to users.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": "7"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 2,
+                "denialOfService": 0
+              }
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Image Data",
+              "description": "Image Data",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Image Data"
+            ],
+            "id": "b59a7d20-e1a4-4135-9846-66d88e61e9c6",
+            "source": {
+              "cell": "297fe5d0-1e3c-4e40-bbc0-7c3d8b7413b5",
+              "port": "3c0ec13d-5852-4e3b-a0e4-30c91afbd0fd"
+            },
+            "target": {
+              "cell": "153e1e03-fffa-4e44-a225-383104be8587",
+              "port": "bcaaa38a-a8e8-49e6-820f-6570f079c091"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Camera frame data",
+              "description": "Camera frame data",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Camera frame data"
+            ],
+            "id": "a02303af-0931-46fd-9f29-ca795772c0ff",
+            "source": {
+              "cell": "21b6221b-03ab-496f-8dd0-fe89fde63b9d",
+              "port": "3c0ec13d-5852-4e3b-a0e4-30c91afbd0fd"
+            },
+            "target": {
+              "cell": "153e1e03-fffa-4e44-a225-383104be8587",
+              "port": "b34f799d-9f8f-4073-bfdf-3e06c6312dc7"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Decoded QR content",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Decoded QR content"
+            ],
+            "id": "8cf9654e-837f-445e-a3a9-fc9b57348d90",
+            "source": {
+              "cell": "153e1e03-fffa-4e44-a225-383104be8587",
+              "port": "3c0ec13d-5852-4e3b-a0e4-30c91afbd0fd"
+            },
+            "target": {
+              "cell": "2871f504-fee0-4a81-8b2d-b215dcf5fd57",
+              "port": "2ffa396f-ae68-4458-b193-569dce950d7e"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Uploads QR Image or screenshot",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "c73f090d-b807-4891-a429-3e60aedcb921"
+              ]
+            },
+            "labels": [
+              "Uploads QR Image or screenshot"
+            ],
+            "id": "0df20e92-d176-4c52-ba7e-88c6fdba5e9e",
+            "source": {
+              "cell": "4296dcd3-5c11-48c3-b59b-3a39ea3e7096",
+              "port": "0334df27-76be-42da-9353-d022e1d4f782"
+            },
+            "target": {
+              "cell": "297fe5d0-1e3c-4e40-bbc0-7c3d8b7413b5",
+              "port": "2ffa396f-ae68-4458-b193-569dce950d7e"
+            },
+            "vertices": [
+              {
+                "x": -420,
+                "y": -480
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Grants camera access / scans QR code",
+              "description": "Grants camera access / scans QR code",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "c73f090d-b807-4891-a429-3e60aedcb921"
+              ]
+            },
+            "labels": [
+              "Grants camera access / scans QR code"
+            ],
+            "id": "f60bf15f-51ce-49ab-96db-f9dc8439770e",
+            "source": {
+              "x": -190,
+              "y": -571
+            },
+            "target": {
+              "cell": "21b6221b-03ab-496f-8dd0-fe89fde63b9d",
+              "port": "2ffa396f-ae68-4458-b193-569dce950d7e"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "c73f090d-b807-4891-a429-3e60aedcb921"
+              ]
+            },
+            "labels": [
+              "Data Flow"
+            ],
+            "id": "974ad000-1fcc-48aa-9e64-52016fdf7098",
+            "source": {
+              "x": -280,
+              "y": 0
+            },
+            "target": {
+              "cell": "9edaf543-e4bb-46e2-9b0a-e39302f8ff81",
+              "port": "faa6c85d-20e6-4803-9c6b-efc1c9e018e0"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Plain-text result / warning",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "c73f090d-b807-4891-a429-3e60aedcb921"
+              ]
+            },
+            "labels": [
+              "Plain-text result / warning"
+            ],
+            "id": "c54f6501-7c9c-4a03-b9e9-843928a1747b",
+            "source": {
+              "x": -280,
+              "y": -140
+            },
+            "target": {
+              "cell": "3009420c-adbb-4a25-a05a-7b56066fc2ca",
+              "port": "2ffa396f-ae68-4458-b193-569dce950d7e"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Optional manual navigation",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Optional manual navigation"
+            ],
+            "id": "d229c1ab-a78f-4f7e-89a5-08a9ff686afa",
+            "source": {
+              "x": -280,
+              "y": 130
+            },
+            "target": {
+              "cell": "14877b0e-8b14-44ee-896d-eeac5d973c21",
+              "port": "7c8b5c0d-8eb4-468a-9b79-f28e2d83b32f"
+            }
+          }
+        ],
+        "description": "QRScope Level 1 DFD"
+      }
+    ],
+    "diagramTop": 3,
+    "reviewer": "Portfolio Project",
+    "threatTop": 5
+  }
+}
