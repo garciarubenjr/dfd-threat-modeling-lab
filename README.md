@@ -1,3 +1,6 @@
+<img width="1347" height="694" alt="00-Threat-Dragon" src="https://github.com/user-attachments/assets/26d12084-ec14-4459-9287-45cb59f35583" />
+
+
 # dfd-threat-modeling-lab
 Security-focused Data Flow Diagram and STRIDE threat modeling lab using OWASP Threat Dragon.
 # DFD Threat Modeling Lab
