@@ -150,6 +150,8 @@ The QRScope Level 1 DFD shows how user-provided QR images, screenshots, and came
 | 4 | Camera scan continues after successful decode | Denial of Service | Medium | 6 | Mitigated |
 | 5 | Sensitive screenshot data exposed through persistence | Information Disclosure | Medium | 7 | Mitigated |
 
+Severity & Score was assigned using a lightweight qualitative approach inspired by DREAD-style thinking: damage potential, reproducibility, exploitability, affected users, and discoverability. This project does not claim formal CVSS scoring.
+
 ---
 
 ## Key Threats and Mitigations
